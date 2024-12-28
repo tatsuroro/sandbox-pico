@@ -1,0 +1,20 @@
+{
+  "sync_file_types": [
+    "py",
+    "txt",
+    "boot.py",
+    "json",
+    "xml",
+    "html",
+    "js",
+    "css",
+    "mpy",
+    "pem",
+    "cet",
+    "crt",
+    "key"
+  ],
+  "py_paths": [
+      "lib"
+  ]
+}

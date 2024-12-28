@@ -1,3 +1,3 @@
 # Sandbox-rp2
 
-rasberry pi pico 2 hobby codes
+Raspberry Pi Pico2 hobby codes

@@ -9,6 +9,8 @@ from machine import Pin
 sw_right = Pin(16, Pin.OUT)
 sw_left = Pin(17, Pin.OUT)
 
+led = Pin('LED', Pin.OUT)
+
 # Initialize the rotary encoder with specific GPIO pins and settings
 rotary = RotaryIRQ(
     pin_num_clk=14,
@@ -36,6 +38,7 @@ while True:
 
     # Check if the rotary encoder's value has changed
     if val_old != val_new:
+        led.value(1)
         if val_new > val_old:
             pulse_switch(sw_right)  # 時計回りでGPIO 16をパルス
         else:
@@ -44,4 +47,5 @@ while True:
         val_old = val_new
 
     # Short delay to prevent debouncing issues
-    time.sleep_ms(5)
+    time.sleep_ms(10)
+    led.value(0)
